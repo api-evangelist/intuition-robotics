@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: searched
+source: live probe of /.well-known/ on intuitionrobotics.com and the ElliQ (elliq.com) store host
+hosts:
+- host: https://elliq.com
+  note: ElliQ product store (Shopify) — publishes a Universal Commerce Protocol (UCP) agent surface
+  documents:
+  - path: /.well-known/ucp
+    status: 200
+    file: intuition-robotics-ucp.json
+    description: UCP merchant profile — supported versions, MCP endpoint, shopping capabilities (catalog/cart/checkout/fulfillment/discount/order), payment handlers
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /llms.txt
+    status: 200
+    note: saved verbatim at llms/intuition-robotics-llms.txt (agent-commerce instructions)
+- host: https://www.intuitionrobotics.com
+  note: corporate site — no developer/API discovery surface published
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404

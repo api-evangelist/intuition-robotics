@@ -1,0 +1,48 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://elliq.com/.well-known/ucp
+note: >-
+  The ElliQ product store (elliq.com, a Shopify storefront) exposes a Universal Commerce Protocol
+  (UCP) agent surface with an MCP transport. This is a commerce/checkout MCP for buying the ElliQ
+  device, not a developer API for the robot itself. Intuition Robotics publishes no first-party
+  developer API or bespoke MCP server. Tool enumeration via tools/list requires the UCP agent-profile
+  handshake; the tools below are the published UCP shopping capabilities from the merchant profile.
+server:
+  name: elliq-ucp-shopping
+  protocol: Universal Commerce Protocol (UCP)
+  ucp_version: '2026-04-08'
+  transport: mcp
+  url: https://elliq.com/api/ucp/mcp
+  canonical_endpoint: https://intuitionrobotics.myshopify.com/api/ucp/mcp
+  discovery: https://elliq.com/.well-known/ucp
+  spec: https://ucp.dev/2026-04-08/specification/overview/
+  merchant: ElliQ
+  payment_handlers:
+  - com.google.pay
+  - dev.shopify.card
+tools:
+- name: search_catalog
+  description: Search the ElliQ store catalog for products matching a buyer's intent
+  capability: dev.ucp.shopping.catalog.search
+- name: lookup_catalog
+  description: Look up a specific product in the store catalog
+  capability: dev.ucp.shopping.catalog.lookup
+- name: create_cart
+  description: Create a cart and add desired items
+  capability: dev.ucp.shopping.cart
+- name: create_checkout
+  description: Start the purchase flow
+  capability: dev.ucp.shopping.checkout
+- name: update_checkout
+  description: Set shipping address and method on a checkout
+  capability: dev.ucp.shopping.fulfillment
+- name: complete_checkout
+  description: Finalize the purchase (buyer must approve payment)
+  capability: dev.ucp.shopping.checkout
+- name: apply_discount
+  description: Apply a discount to a cart/checkout
+  capability: dev.ucp.shopping.discount
+- name: get_order
+  description: Retrieve order status after checkout
+  capability: dev.ucp.shopping.order

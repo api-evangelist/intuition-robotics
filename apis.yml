@@ -1,8 +1,15 @@
 aid: intuition-robotics
 name: Intuition Robotics
-description: Intuition Robotics is a company surfaced as a portfolio company of bloomberg-beta and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Intuition Robotics is a Tel Aviv-based AI company (with offices in the United States, Japan, and
+  Greece) building social companion technology for older adults. Its flagship product, ElliQ, is an
+  AI care companion robot that proactively engages users through natural conversation, body language,
+  lights, and sound, powered by a proprietary "Relationship Orchestrator" cognitive-AI platform and
+  multiple large language models to support health, wellness, cognitive engagement, and reducing
+  loneliness. Intuition Robotics publishes no first-party developer API, SDK, or developer portal;
+  the ElliQ product store (elliq.com, on Shopify) does expose an agent-commerce surface via the
+  Universal Commerce Protocol (UCP), including a published llms.txt and a UCP shopping MCP endpoint
+  for agent-driven catalog search and checkout. Backed by Bloomberg Beta among other investors.
 url: https://raw.githubusercontent.com/api-evangelist/intuition-robotics/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,11 +17,29 @@ x-backed-by:
 - bloomberg-beta
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/6624a84c242b2715e03c637f/664831e6488ee99b3daa93fa_f.jpg
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Robotics
+- Artificial Intelligence
+- Eldercare
+- Consumer Electronics
+- Healthcare
+- Agentic Commerce
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,4 +48,26 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://www.intuitionrobotics.com
+  url: https://www.intuitionrobotics.com
+- type: Blog
+  url: https://www.intuitionrobotics.com/blog
+- type: TermsOfService
+  url: https://www.intuitionrobotics.com/information/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.intuitionrobotics.com/information/privacy-policy
+- type: LLMsTxt
+  name: ElliQ agent instructions (llms.txt)
+  url: llms/intuition-robotics-llms.txt
+- type: WellKnown
+  name: Well-known discovery index (UCP)
+  url: well-known/intuition-robotics-well-known.yml
+- type: MCPServer
+  name: ElliQ UCP shopping MCP
+  url: mcp/intuition-robotics-mcp.yml
+- type: DomainSecurity
+  url: security/intuition-robotics-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
