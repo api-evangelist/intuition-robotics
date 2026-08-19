@@ -2,12 +2,11 @@ generated: '2026-07-19'
 method: searched
 status: published
 source: https://elliq.com/.well-known/ucp
-note: >-
-  The ElliQ product store (elliq.com, a Shopify storefront) exposes a Universal Commerce Protocol
-  (UCP) agent surface with an MCP transport. This is a commerce/checkout MCP for buying the ElliQ
-  device, not a developer API for the robot itself. Intuition Robotics publishes no first-party
-  developer API or bespoke MCP server. Tool enumeration via tools/list requires the UCP agent-profile
-  handshake; the tools below are the published UCP shopping capabilities from the merchant profile.
+note: The ElliQ product store (elliq.com, a Shopify storefront) exposes a Universal Commerce Protocol
+  (UCP) agent surface with an MCP transport. This is a commerce/checkout MCP for buying the ElliQ device,
+  not a developer API for the robot itself. Intuition Robotics publishes no first-party developer API
+  or bespoke MCP server. Tool enumeration via tools/list requires the UCP agent-profile handshake; the
+  tools below are the published UCP shopping capabilities from the merchant profile.
 server:
   name: elliq-ucp-shopping
   protocol: Universal Commerce Protocol (UCP)
@@ -46,3 +45,11 @@ tools:
 - name: get_order
   description: Retrieve order status after checkout
   capability: dev.ucp.shopping.order
+deployment:
+  mode: remote
+  endpoint: https://elliq.com/api/ucp/mcp
+  verified: probed
+  probe: live
+  tools: 13
+  checked: '2026-08-12'
+  source: catalog MCP census
