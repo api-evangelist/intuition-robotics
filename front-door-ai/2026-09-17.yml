@@ -1,0 +1,31 @@
+# Front Door AI Index — intuition-robotics — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: intuition-robotics
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.intuitionrobotics.com
+  final_host: www.intuitionrobotics.com
+  ownership: own
+  owner: intuition-robotics
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 14
+  host_score: 14
+  density: 18.3
+  words: 765
+  tiers:
+    agentic: 1
+    core: 13
+    model: 0
+  ambiguous: 2
+  top_terms:
+    AI: 10
+    A.I.: 1
+    LLMs: 1
+    chatbot: 1
+    cognitive: 1
+    generative ai: 1
+    smart: 1
